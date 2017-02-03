@@ -36,12 +36,12 @@ function checkNumber($num_in , $num_me){
 		$final_result = $str_look.$str_position;
 	}
 
-    $resultado .= $final_result . "<br>";
-	//return $final_result;
+    //$resultado .= $final_result . "<br>";
+	return $final_result;
 }
 
 if( isset($_POST['textarea']) ) {
-    checkNumber($_POST['textarea'], 1234);
+    $resultado = checkNumber($_POST['textarea'], 1234);
 }
 
 ?>
