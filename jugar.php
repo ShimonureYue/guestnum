@@ -3,6 +3,10 @@ include "conexion.php";
 
 $numinput = '';
 $resultado = '';
+$resultado = array(
+	'patron' => '',
+	'mensaje' => ''
+);
 
 function checkNumber($num_in , $num_me){
 	$numero = (string)$num_in;
@@ -11,6 +15,18 @@ function checkNumber($num_in , $num_me){
 	$numeros_input  = str_split ($numero,1);
 	$numeros_interno = str_split ($numero_interno,1);
 
+	$final_result = "";	
+	$mensaje_resultado = "";	
+	//Verificando los digitos únicos
+	if(count( array_unique ($numeros_input)) < 4 ){
+		$final_result = "Todos los dígitos deben ser diferentes";
+		
+		return array(
+			'patron' => "ERROR",
+			'mensaje' => $final_result
+		);
+	}
+	
 	//Verificando aparicion
 	$str_look="";
 	for ($i = 0;$i<4;$i++){//Recorremos todas las posiciones 
@@ -31,19 +47,25 @@ function checkNumber($num_in , $num_me){
 	//Excluimos la condicion de ganada
 	if($str_look == "XXXX" && $str_position == "----"){
 		$final_result = $str_position;
+		$mensaje = "VICTORIA";
+		$aux_str = $_SESSION['contador'];
+		//$rs = ejecutar("insert into scores (numero, intentos) values ('$numero', $aux_str)");
+		$_SESSION['contador']=0;
+		
 	}else{
 		$final_result = $str_look.$str_position;
+		$mensaje = "INTENTA DE NUEVO";
 	}
-
-    $rs = ejecutar("insert into scores (numero, intentos) values ('$numero', 3)");
-
-    //$resultado .= $final_result . "<br>";
-	return $final_result;
+	
+	return array(
+			'patron' => $final_result,
+			'mensaje' => $mensaje,
+	);
 }
 
 if( isset($_POST['textarea']) ) {
     //$resultado = $_POST['str_res'];
-    $resultado .= checkNumber($_POST['textarea'], 1234) . "\n";
+    $resultado = checkNumber($_POST['textarea'], 1234);
 }
 
 ?>
