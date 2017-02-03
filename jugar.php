@@ -1,11 +1,10 @@
 <?php
+include "conexion.php";
+
 $numinput = '';
 $resultado = '';
 
 function checkNumber($num_in , $num_me){
-    //$num_in = $_POST['textarea'];
-    //$num_me = '1234';
-
 	$numero = (string)$num_in;
 	$numero_interno = (string) $num_me;
 	
@@ -36,12 +35,15 @@ function checkNumber($num_in , $num_me){
 		$final_result = $str_look.$str_position;
 	}
 
+    $rs = ejecutar("insert into scores (numero, intentos) values ('$numero', 3)");
+
     //$resultado .= $final_result . "<br>";
 	return $final_result;
 }
 
 if( isset($_POST['textarea']) ) {
-    $resultado = checkNumber($_POST['textarea'], 1234);
+    //$resultado = $_POST['str_res'];
+    $resultado .= checkNumber($_POST['textarea'], 1234) . "\n";
 }
 
 ?>

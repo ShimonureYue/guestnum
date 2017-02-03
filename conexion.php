@@ -4,8 +4,8 @@
 	function conectar(){  
         global $con;
 		
-		$host   = "localhost";
-		$usr    = "";
+		$host   = "fdb13.biz.nf";
+		$usr    = "2188359_juego";
 		$pwd    = "hola12345";
 		$db     = "2188359_juego";
 		
