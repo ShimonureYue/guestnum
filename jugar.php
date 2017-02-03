@@ -49,7 +49,10 @@ function checkNumber($num_in , $num_me){
 		$final_result = $str_position;
 		$mensaje = "VICTORIA";
 		$aux_str = $_SESSION['contador'];
-		//$rs = ejecutar("insert into scores (numero, intentos) values ('$numero', $aux_str)");
+		
+		$q = "insert into scores (numero, intentos) values ('$numero', $aux_str)";
+		echo $q . "<br>";
+		$rs = ejecutar($q);
 		$_SESSION['contador']=0;
 		
 	}else{
