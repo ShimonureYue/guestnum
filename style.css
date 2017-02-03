@@ -104,7 +104,30 @@ input:focus, textarea:focus {
 	background-color: rgba(0,0,0,0);
 	color: #0493bd;
 }
-	
+
+.Scores {
+    float: right;
+    width: 330px;
+    height: 100px;
+    margin: 10px;
+    border: 3px solid #FFFFFF;
+	padding: 10px;
+	margin-top:0px;
+  
+}
+
+.Ganador {
+   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+	text-align: 	center;
+	color: white;
+}
+
+.h3{
+	text-align: center;
+	color: gold;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
 .submit:hover {
 	color: #3498db;
 }
@@ -124,8 +147,6 @@ input:focus, textarea:focus {
   width:100%;
   background-color:white;
 }
-
-
 
 @media only screen and (max-width: 580px) {
 	#form-div{
