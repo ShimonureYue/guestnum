@@ -7,11 +7,11 @@ $resultado_fake = array(
 	"patron" => "XX--",
 	"stack" => array(
 		array(
-			"input" => 1466
+			"input" => 1466,
 			"patron" => "X-"
 		),
 		array(
-			"input" => 9867
+			"input" => 9867,
 			"patron" => "X"
 		),
 	), 
