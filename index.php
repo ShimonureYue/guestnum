@@ -13,7 +13,7 @@ include "jugar.php";
 <body>
     <div id="form-main">
         <div id="form-div"> 
-            <form class="form" id="form1" method="POST" action="checkNumber()">
+            <form class="form" id="form1" method="POST" action="index.php">
                 <center>
                     <p class="textarea">
                         <input name="textarea" type="number" class="validate[required,custom[onlyLetter],length[0,4]] feedback-input" placeholder="Número" id="textarea" maxlength="4" required="required" min="0" step="1" style="width:70%;height:30px;" />
