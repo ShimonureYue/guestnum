@@ -70,7 +70,12 @@ html{    background:url(http://thekitemap.com/images/feedback-img.jpg) no-repeat
 	background-repeat: no-repeat;
 }
 
-
+#comment{
+	background-size: 300px 30px;
+	padding: 0,10,0,0;
+	background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
 
 input:hover, textarea:hover,
 input:focus, textarea:focus {
@@ -119,6 +124,8 @@ input:focus, textarea:focus {
   width:100%;
   background-color:white;
 }
+
+
 
 @media only screen and (max-width: 580px) {
 	#form-div{
