@@ -7,6 +7,13 @@ function checkNumber($num_in , $num_me){
 	$numeros_input  = str_split ($numero,1);
 	$numeros_interno = str_split ($numero_interno,1);
 
+	$final_result = "";	
+	//Verificando los digitos únicos
+	if(count( array_unique ($numeros_input)) < 4 ){
+		$final_result = "Todos los dígitos deben ser diferentes";
+		return $final_result;
+	}
+	
 	//Verificando aparicion
 	$str_look="";
 	for ($i = 0;$i<4;$i++){//Recorremos todas las posiciones 
@@ -33,8 +40,7 @@ function checkNumber($num_in , $num_me){
 	return $final_result;
 }
 
-
-echo checkNumber(1234,1234);
+echo checkNumber(1234,5624);
 
 
 
