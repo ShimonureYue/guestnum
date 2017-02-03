@@ -69,6 +69,13 @@ html{    background:url(http://thekitemap.com/images/feedback-img.jpg) no-repeat
 	background-position: 11px 8px;
 	background-repeat: no-repeat;
 }
+.textarea2{
+	min-height: 300px;
+	min-width: 300px;
+	background-size: 30px 30px;
+	background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
 
 #comment{
 	background-size: 300px 30px;
@@ -112,9 +119,9 @@ input:focus, textarea:focus {
     margin: 10px;
     border: 3px solid #FFFFFF;
 	padding: 10px;
-	margin-top:0px;
-  
-}
+
+	margin-top:30px;
+  }
 
 .Ganador {
    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
@@ -154,7 +161,20 @@ input:focus, textarea:focus {
 		margin-right: 3%;
 		width: 88%;
 		margin-left: 0;
+		padding: 40%;
+		padding-left: 3%;
+		padding-right: 3%;
+	position: relative;
+  margin-top:30px;
+	}
+	
+	#Scores{
+		align-content: center;
+		margin-right: 3%;
+	    width: 400px;
+		margin-left: 0;
 		padding-left: 3%;
 		padding-right: 3%;
 	}
+	
 }

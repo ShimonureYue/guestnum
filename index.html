@@ -4,16 +4,17 @@
 <head>
     <meta charset="utf-8" />
     <title>Guess Num</title>
-    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />   
 </head>
 <body>
-   <div class="Scores">
-   <h3 class="h3">Max Scores</h3>
-  <label class="Ganador">*ejemplo Ganador</label>
+  <div class="col-12">
    
-   </div>
-    <div id="form-main">
-        <div id="form-div"> 
+         
+        <div  id="form-div"> 
             <form class="form" id="form1" method="POST" action="index.php">
                 <center>
                     <p class="textarea">
@@ -23,14 +24,30 @@
                    <div class="submit">
                         <input type="submit" value="Enviar" id="button-blue"/>
                     </div>
-                       <div class="ease"></div>	
+                       <div class="ease"></div>
+					
+				  <p>
+                  	 <label id="lblNúmero" class="Ganador">*ejemplo Número</label>
+                  	 </p>
+                  	 <p>
+                  	  <label id="lblMensaje" class="Ganador">*ejemplo Mensaje</label>
+                  </p> 
+                   
                     <p class="text">
                     <br/>
-						<textarea name="text" id="comment" style="width:400px;height:400px" placeholder="Resultado"></textarea>
+						<textarea name="text" class="textarea2" id="comment" placeholder="Resultado"></textarea>
 					  </p>	
+               
+               <p>
+               	 
+		   <h3 class="h3">Max Scores</h3>
+		  <label id="lblMaxScore" class="Ganador">*ejemplo Ganador</label>
+
+               </p>
                 </center>
             </form>
-        </div>
-   </div>
+       </div> 
+         
+ </div>
 </body>
 </html>
