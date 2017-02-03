@@ -1,22 +1,10 @@
 <?php
-function xor_this($string) {
- $key = ('magic_key');
+$numinput = '';
+$resultado_fake;
 
- // Our plaintext/ciphertext
- $text =$string;
-
- // Our output text
- $outText = '';
-
- // Iterate through each character
- for($i=0; $i<strlen($text); ){
-     for($j=0;$j<strlen($key);$j++,$i++)
-     {
-         $outText .= $text{$i} ^ $key{$j};
-         echo 'i='.$i.', '.'j='.$j.', '.$outText{$i}.'<br>'; //for debugging
-     }
- }  
- return $outText;
+if( isset($_POST['textarea']) ) {
+    $numinput = $_POST['textarea'];
+    echo $numinput."<br>";
 }
 
 function respuesta() {
@@ -46,7 +34,7 @@ function respuesta() {
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title>Guess Num</title>
+    <title>Guess Number</title>
     <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
 </head>
 <body>
@@ -60,7 +48,6 @@ function respuesta() {
 
                     <div class="submit">
                         <input type="submit" value="Enviar" id="button-blue" />
-                        <div class="ease"></div>
                     </div>
                 </center>
             </form>
